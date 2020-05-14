@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NaRuHoDo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.9/vue.js"></script>
+    <script src="control.js"></script>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top at_top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span
+                        class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a
+                    class="navbar-brand" href="#header_index">NaRuHoDo</a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#section_about">始末</a></li>
+                    <!-- <li class="active"><a href="#section_works">Works</a></li> -->
+                    <li><a href="#section_contact">碎語</a></li>
+                </ul>
+            </div>
+            <!-- /.nav-collapse-->
+        </div>
+    </nav>
+    <header id="header_index">
+        <div class="container">
+            <video id="movie" preload controls loop  width="640" height="480">
+                <source src="NaRuHoDoDemo.mp4" type="video/mp4" />
+            </video>
+            <div class="explore at_top">EXPLORE</div>
+        </div>
+    </header>
+    <section id="section_about"><img class="marginbottom" src="https://awiclass.monoame.com/img/margin/m_about.svg" alt="" /><img
+            id="cat" src="img/MucrphySea.png" />
+        <div id="cross"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-4"><img class="tri tri1" src="https://awiclass.monoame.com/img/webpic/w_tri1.svg"
+                        alt="" />
+                    <h2 class="r1text">這個遊戲的始末</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"><img class="tri tri2" src="https://awiclass.monoame.com/img/webpic/w_tri2.svg"
+                        alt="" /></div>
+                <div class="col-sm-8"><img class="tri tri3" src="https://awiclass.monoame.com/img/webpic/w_tri3.svg"
+                        alt="" />
+                    <h3 class="r2text">這個遊戲是從2020年的四月底開始製作，<br>目前美術和程式都是自已撰寫與繪製。</h3>
+                    <p class="">因為很喜歡繪圖也很享受寫程式，雖然本身曾經做過遊戲企劃，目前工作也跟程式有關係，
+                            <br>而偶然間幫朋友繪製遊戲需要的美術時，開始萌生了想自己做遊戲的念頭，不久後就著手進行著製作遊戲了。
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2 class="r3text">行動是實現希望的唯一途徑</h2>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <!-- <div class="col-sm-4 btn-area"><a class="btn btn-lg btn-default" href="#section_contact">MORE STORY</a><img
+                        class="tri tri4" src="https://awiclass.monoame.com/img/webpic/w_tri4.svg" alt="" /></div> -->
+                <div class="col-sm-4"><img class="tri tri5" src="https://awiclass.monoame.com/img/webpic/w_tri5.svg"
+                        alt="" /></div>
+            </div>
+        </div>
+    </section>
+    <section id="section_service">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>製作遊戲的工具</h1>
+                </div>
+                <div class="col-sm-4"><img class="icon_service" src="https://awiclass.monoame.com/img/webpic/w_service_icon1.svg"
+                        alt="" />
+                    <h3>Unity2D</h3>
+                </div>
+                <div class="col-sm-4"><img class="icon_service" src="https://awiclass.monoame.com/img/webpic/w_service_icon2.svg"
+                        alt="" />
+                    <h3>Tiwi腦袋/筆電</h3>
+                </div>
+                <div class="col-sm-4"><img class="icon_service" src="https://awiclass.monoame.com/img/webpic/w_service_icon3.svg"
+                        alt="" />
+                    <h3>Aseprite/Photoshop</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="section_works"><img class="marginbottom mountain" src="https://awiclass.monoame.com/img/margin/m_works.svg" />
+        <div class="container" id="app">
+            <div class="row" v-if="works.length&gt;0">
+                <div class="col-sm-12">
+                    <h1>Works</h1>
+                </div>
+                <div class="col-sm-6 work big"><img :src="works[1].img" alt="" />
+                    <div class="texts">
+                        <h4 class="title">{{works[1].name}}</h4>
+                        <p class="content" v-html="works[1].content.substr(0,40)"></p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="col-sm-6 work" v-for="w in works.slice(2,6)"><img :src="w.img" alt="" />
+                        <div class="texts">
+                            <h4 class="title">{{w.name}} </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section id="section_contact">
+        <img class="cat" id="cat_blue" src="img/Cover.png"
+            alt="" />
+            
+            <!-- <img class="cat" id="cat_yellow" src="img/Cover2.png" alt="" /> -->
+            <img class="cat" id="cat_grey" src="img/Cover3.png" alt="" />
+            
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="mails">
+                        <div class="mailcover"><img src="https://awiclass.monoame.com/img/webpic/w_mail_cover.svg" alt="" /></div>
+                        <div class="mailbody">
+                            <h2>原來，我是...(暫定名稱)</h2>
+                            <br>
+                            <label>之後陸陸續續更新都會放置IG，<br>希望大家都會喜歡這個遊戲。<br>
+                            等遊戲告一個段落後，會開放試玩~<br>然後可以留言給我一同完善這個遊戲~
+                        </label>
+                    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!-- <h2>CONTACT</h2><br />
+                    <p>If you have any question about us,<br>Don`t hestitate to contact us !</p><br /><br />
+                    <p>YELLOWSTUDIO@gmail.com<br>ADDRESS: TAIWAN, TAIPEI , XORO Road<br>Phone: 02-12345678</p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer"><img class="icon" src="img/NaRuHoDo.png" /></footer>
+</body>
+
+</html>
